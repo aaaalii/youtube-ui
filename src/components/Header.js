@@ -23,7 +23,7 @@ export default function Header() {
         </div>
       </div>
       <div className="ms-auto rounded-40 icon">
-        <button className="btn text-light">{<FontAwesomeIcon icon={faPlus}/>} {<div className="header__createText">Create</div>}</button>
+        <button className="btn text-light d-flex justify-content-center align-items-center">{<FontAwesomeIcon icon={faPlus}/>} {<div className="header__createText ms-1">Create</div>}</button>
       </div>
         <FontAwesomeIcon icon={faBell}/>
       <FontAwesomeIcon icon={faUser}/>

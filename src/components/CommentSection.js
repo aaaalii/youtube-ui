@@ -13,7 +13,7 @@ export default function CommentSection({totalComments}) {
       </div>
         <div className="d-flex mt-3">
           <img src="logo512.png" alt="" className="rounded-circle" width='40'/>
-          <input type="text" className="ms-3 bg-dark text-white comment-section__input" placeholder="Add a comment..."/>
+          <input type="text" className="ms-3 app-bg text-white comment-section__input" placeholder="Add a comment..."/>
         </div>
       <div style={{maxWidth: "100%"}}>
         <Comment img="logo512.png" name="ali" comment="Comment" time="9 months"/>

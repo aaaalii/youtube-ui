@@ -10,9 +10,15 @@ body{
   color: hsl(0, 0%, 100%);
 }
 
-.header-bg{
+.app-bg{
   background-color: hsl(0, 0%, 13.73%);
-  opacity: 0.9;
+  /* opacity: 0.9; */
+}
+
+
+a{
+  text-decoration: none;
+  color: white;
 }
 
 .search-bar{
@@ -139,6 +145,17 @@ videoCard__info_title
   overflow: auto;
 }
 
+.header__notification--position{
+  position: relative;
+  top: -25px;
+  right: -5px;
+  background-color: red;
+  border-radius: 10px;
+  font-size: 7px;
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (max-width: 980px){
   .main{
     display: flex;
@@ -181,4 +198,6 @@ videoCard__info_title
   .left-section--mobile-view{
     padding-top: 20px;
   }
+
+  
 }

@@ -5,8 +5,14 @@ import ReactionButton from "./ReactionButton";
 import VideoPlayer from "./VideoPlayer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp, faThumbsDown, faShare, faDownload, faEllipsisH } from "@fortawesome/free-solid-svg-icons";
+import { Dropdown } from "react-bootstrap";
+import { DropDownToogle } from "./DropDownToogle";
 
 export default function LeftSection() {
+
+  function showOptions(){
+
+  }
   return (
     <>
       <div className="left-section overflow-none">
@@ -19,7 +25,18 @@ export default function LeftSection() {
             <div className="download-button">
               <ReactionButton icon= {<><FontAwesomeIcon icon={faDownload} className="me-2"/> Download</>}/>
             </div>
-            <ReactionButton icon={<FontAwesomeIcon icon={faEllipsisH}/>}/>
+            <div>
+              <Dropdown data-bs-theme="dark">
+                <Dropdown.Toggle as={DropDownToogle}>
+                  <ReactionButton icon={<FontAwesomeIcon icon={faEllipsisH}/>}/>
+                </Dropdown.Toggle>
+                
+                <Dropdown.Menu>
+                  <Dropdown.Item>option 1</Dropdown.Item>
+                  <Dropdown.Item>option 2</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            </div>
           </div>
         </div>
         <div className="mt-4">
@@ -28,7 +45,7 @@ export default function LeftSection() {
         <div className="mt-3">
           <CommentSection totalComments='20000'/>
         </div>
-    </div>
+      </div>
     </>
   );
 }

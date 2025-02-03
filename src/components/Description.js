@@ -9,7 +9,7 @@ export default function Description({views, date, description}) {
           <p className="fs-sm text-light">{views} views</p>
           <p className="fs-sm text-light ms-2">{date}</p>
         </div>
-        <Accordion defaultActiveKey="0">
+        <Accordion>
           <Toogle eventKey="0">Show more</Toogle>
           <Accordion.Collapse eventKey="0">
             <div className="fs-sm">

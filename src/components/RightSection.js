@@ -10,6 +10,37 @@ export default function RightSection() {
       <VideoCard/>
       <VideoCard/>
       <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
+      <VideoCard/>
     </div>
   );
 }

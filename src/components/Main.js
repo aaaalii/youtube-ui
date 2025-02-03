@@ -4,7 +4,7 @@ import RightSection from "./RightSection";
 export default function Main() {
   return (
     <>
-      <div className="ps-5 pe-5 pt-6 bg-dark text-light overflow-auto main d-flex justify-content-center">
+      <div className="ps-5 pe-5 mt-6 text-light overflow-auto main">
         <LeftSection/>
         <RightSection/>
       </div>

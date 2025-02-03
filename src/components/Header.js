@@ -1,32 +1,32 @@
 import { Stack } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faBell, faMicrophone, faPlus, faSearch, faUser } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   return (
-    <Stack direction="horizontal" gap={3} className="bg-dark text-light ps-4 pe-4 pt-1 pb-2 position-fixed w-100 d-flex justify-content-between align-items-center">
-      <div className="p-2">
-        <img src="https://img.icons8.com/ios-glyphs/30/ffffff/menu.png" alt="menu" className=""/>
-      </div>
+    <Stack direction="horizontal" gap={3} className=" text-light ps-4 pe-4 position-fixed w-100 d-flex justify-content-between align-items-center header-bg">
+      <FontAwesomeIcon icon={faBars}/>
       <div className="">
-        <img src="https://img.icons8.com/ios-glyphs/30/ffffff/youtube.png" alt="home" className=""/>
+        <img src="youtube-logo.svg" alt="home" className="" width='110px'/>
       </div>
       <div className="ms-auto">
         <div className="d-flex">
-          <div id="search" className="youtube-border rounded-40 overflow-hidden ps-2 d-flex align-items-center">
-            <input type="text" className="bg-dark text-light search-bar" placeholder="Search"/>
+          <div id="search" className="youtube-border rounded-40 overflow-hidden ps-2 d-flex align-items-center" style={{  backgroundColor: 'hsl(0, 0%, 13.73%)'}}>
+            <input type="text" className="text-light search-bar" placeholder="Search" style={{  backgroundColor: 'hsl(0, 0%, 13.73%)'}}/>
             <div className="icon p-1 pe-2 display-flex align-items-center header__searchIcon pb-1">
-              <img src="https://img.icons8.com/ios-glyphs/30/ffffff/search--v1.png" alt="search" height='20px' className="pb-1"/>
+              <FontAwesomeIcon icon={faSearch}/>
             </div>
           </div>
           <div id="mic" className="rounded-circle ms-2 icon p-2 d-flex align-items-center">
-            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/microphone.png" alt="mic" width='20px' height='18px'/>
+            <FontAwesomeIcon icon={faMicrophone} className="px-1"/>
           </div>
         </div>
       </div>
       <div className="ms-auto rounded-40 icon">
-        <button className="btn text-light"> + Create</button>
+        <button className="btn text-light">{<FontAwesomeIcon icon={faPlus}/>} {<div className="header__createText">Create</div>}</button>
       </div>
-      <img src="https://img.icons8.com/ios-glyphs/30/ffffff/bell.png" alt="bell" className=""/>
-     <img src="https://img.icons8.com/ios-glyphs/30/ffffff/user.png" alt="user" className=""/>
+        <FontAwesomeIcon icon={faBell}/>
+      <FontAwesomeIcon icon={faUser}/>
     </Stack>
   );
 }

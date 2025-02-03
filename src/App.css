@@ -10,6 +10,11 @@ body{
   color: hsl(0, 0%, 100%);
 }
 
+.header-bg{
+  background-color: hsl(0, 0%, 13.73%);
+  opacity: 0.9;
+}
+
 .search-bar{
   border: none;
   padding: 4px;
@@ -17,6 +22,10 @@ body{
 }
 
 input:focus-visible{
+  outline: none;
+}
+
+input:focus{
   outline: none;
 }
 
@@ -29,7 +38,6 @@ input:focus-visible{
 }
 
 .icon{
-  /* padding: 2px 10px 2px 10px; */
   background-color: hsla(0, 0%, 100%, .08);
   border: 1px solid hsl(0, 0%, 18.82%);
 }
@@ -50,18 +58,19 @@ videoCard__info_title
 .video-player{
   background-color: red;
   height: 400px;
-  width: 60dvw;
   border-radius: 10px;
 }
 
 .main{
   width: 100%;
-  height: calc(100dvh - 58px);
+  /* height: calc(100dvh - 58px); */
+  display: flex;
+  justify-content: center;
 }
 
 .left-section{
   /* background-color: green; */
-  width: auto;
+  width: 60%;
   height: max-content;
 }
 
@@ -71,8 +80,8 @@ videoCard__info_title
   height: max-content;
 }
 
-.pt-6{
-  margin-top: 3.6rem !important;
+.mt-6{
+  margin-top: 4.6rem !important;
 }
 
 .videoCard{
@@ -107,4 +116,69 @@ videoCard__info_title
 
 .reaction-button{
   width: fit-content;
+}
+
+.left-section__button{
+  height: 40px;
+  font-size: smaller;
+}
+
+.left-section__description{
+  background-color: hsla(0, 0%, 100%, .08);
+  border-radius: 10px;
+}
+
+.comment__message{
+  width: inherit;
+}
+
+.comment-section__input{
+  border: none;
+  border-bottom: 1px solid hsl(0, 0%, 18.82%);
+  width: 100%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 980px){
+  .main{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-section{
+    width: inherit;
+  }
+
+  .right-section{
+    width: 100%;
+  }
+  
+}
+
+@media screen and (max-width: 1200px){
+  .download-button{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 695px){
+  .header__createText{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 627px){
+  .left-section__videoDetails{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .download-button{
+    display:block;
+  }
+
+  .left-section--mobile-view{
+    padding-top: 20px;
+  }
 }

@@ -1,7 +1,7 @@
 export default function Comment({img, name, comment, time}) {
   return (
     <>
-      <div className="d-flex pt-3">
+      <div className="d-flex pt-3 comment">
         <div>
           <img src={img} alt="" className="rounded-circle" width="40"/>
         </div>

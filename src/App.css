@@ -24,7 +24,15 @@ a{
 .search-bar{
   border: none;
   padding: 4px;
-  border-right: 1px solid hsl(0, 0%, 18.82%);
+  width: 100%;
+}
+
+.sidebar{
+  width: 0;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 200ms;
 }
 
 input:focus-visible{
@@ -51,7 +59,7 @@ input:focus{
 .bg-dark-youtube{
   background-color: hsla(0, 0%, 100%, .08);
 }
-videoCard__info_title
+
 .button{
   background-color: hsla(0, 0%, 100%, .08);
   border: 1px solid hsl(0, 0%, 18.82%);
@@ -61,9 +69,13 @@ videoCard__info_title
   border: 1px solid hsl(0, 0%, 18.82%);
 }
 
-.video-player{
-  background-color: red;
+.video-container{
+  /* background-color: red; */
   height: 400px;
+  width: 100%;
+}
+
+.rounded-10{
   border-radius: 10px;
 }
 
@@ -98,7 +110,7 @@ videoCard__info_title
 }
 
 .videoCard__video{
-  background-color: rgb(0, 255, 255);
+  /* background-color: rgb(0, 255, 255); */
   height: 100%;
   width: 44%;
   border-radius: 10px;
@@ -116,12 +128,20 @@ videoCard__info_title
   font-size: 12px;
 }
 
+.header{
+  width: 100dvw;
+}
+
 .header__searchIcon{
   height: 100%;
 }
 
 .reaction-button{
   width: fit-content;
+}
+
+.active{
+  background-color: hsl(0, 0%, 18.82%);
 }
 
 .left-section__button{
@@ -199,5 +219,9 @@ videoCard__info_title
     padding-top: 20px;
   }
 
-  
+  .comment{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }

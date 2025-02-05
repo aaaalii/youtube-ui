@@ -1,18 +1,14 @@
 import { Stack } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faBell, faMicrophone, faPlus, faSearch, faUser } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
-export default function Header() {
+export default function Header({setSidebarOpen}) {
 
   function openSidebar(){
-    let sidebar = document.getElementById('sidebar');
-    if(sidebar.style.width === '250px'){
-      sidebar.style.width = '0';
-    } else {
-      sidebar.style.width = '240px';
-      // document.body.style.backgroundColor = "rgba(0, 0, 0, 0.88)";
-    }
+    setSidebarOpen(true);
   }
+  
   return (
     <Stack direction="horizontal" gap={3} className="header text-light px-4 position-fixed d-flex justify-content-between align-items-center app-bg z-1">
       <div onClick={openSidebar} style={{cursor: 'pointer'}}>
@@ -35,7 +31,9 @@ export default function Header() {
         </div>
       </div>
       <div className="ms-auto rounded-40 icon">
-        <button className="btn text-light d-flex justify-content-center align-items-center">{<FontAwesomeIcon icon={faPlus}/>} {<div className="header__createText ms-2 fs-sm fw-bold">Create</div>}</button>
+        <Link to="/video">
+          <button className="btn text-light d-flex justify-content-center align-items-center">{<FontAwesomeIcon icon={faPlus}/>} {<div className="header__createText ms-2 fs-sm fw-bold">Create</div>}</button>
+        </Link>
       </div>
         <div style={{height: '16px'}}>
             <FontAwesomeIcon icon={faBell}/>

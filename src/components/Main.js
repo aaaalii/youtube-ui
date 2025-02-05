@@ -2,11 +2,9 @@ import { useEffect, useState } from "react";
 import LeftSection from "./LeftSection";
 import RightSection from "./RightSection";
 import Sidebar from "./Sidebar";
-import { Video } from "../Video";
 
 export default function Main() {
   const [activeIndex, setActiveIndex] = useState(0);
-  console.log("🚀 ~ Main ~ activeIndex:", activeIndex)
 
   const videoList = [
     {
@@ -51,7 +49,7 @@ export default function Main() {
     },
   ];
 
-  const [vedioes, setVideos] = useState(videoList);
+  const [videos, setVideos] = useState(videoList);
   const [video, setVideo] = useState(videoList[0]);
   useEffect(() => {
 
@@ -59,9 +57,8 @@ export default function Main() {
   return (
     <>
       <div className="ps-5 pe-5 mt-6 text-light main">
-        <Sidebar />
         <LeftSection video={video}/>
-        <RightSection setVideo={setVideo} videoList={vedioes} activeIndex={activeIndex} setActiveIndex={setActiveIndex}/>
+        <RightSection setVideo={setVideo} videoList={videos} activeIndex={activeIndex} setActiveIndex={setActiveIndex}/>
       </div>
     </>
   );

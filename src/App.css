@@ -176,6 +176,16 @@ input:focus{
   justify-content: center;
 }
 
+.sidebar--open{
+  width: 240px;
+  overflow: auto;
+}
+
+.sidebar--closed{
+  width: 0;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 980px){
   .main{
     display: flex;
